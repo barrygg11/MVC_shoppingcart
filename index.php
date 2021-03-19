@@ -51,10 +51,3 @@
 <input type="button" value="加入購物車" name="button"><p>
 </body>
 </html>
-
-
-
-<?php
-$a="10"; $b="15"; $c="20"; $d="30";
-echo '總金額',($a + $b + $c +$d),'元';
-
