@@ -14,10 +14,10 @@ if (isset($_POST['submit'])) {
 			echo "<script>alert('登入成功!'); location.href = 'index.php';</script>";
 			exit;
 		} else {
-			echo "<script>alert('使用者or密碼有問題!'); location.href = 'login.php';</script>";
+			echo "<script>alert('使用者or密碼有問題!'); location.href = 'userlogin.php';</script>";
 		}
 	} else {
-		echo "<script>alert('內容不完整!'); location.href = 'login.php';</script>";
+		echo "<script>alert('內容不完整!'); location.href = 'userlogin.php';</script>";
 	}
 	mysqli_close();
 }

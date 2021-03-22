@@ -4,7 +4,8 @@ date_default_timezone_set('Asia/Taipei');
 $DateAndTime = date('Y-m-d h:i:s a', time());  
 echo "目前時間 $DateAndTime.";
 ?>
-<p><a href="adminlogin.php">管理員</a>
+<p>-----當前是使用者模式-----</p>
+>切換<a href="adminlogin.php">管理員</a>
 <html>
 <body>
 <form name="login" action="userlogincontroller.php" method="post">

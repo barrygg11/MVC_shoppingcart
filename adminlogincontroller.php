@@ -11,13 +11,13 @@ if (isset($_POST['submit'])) {
 		$result = mysqli_query($db, $sql);
 		$rows = mysqli_num_rows($result);
 		if ($rows) {
-			echo "<script>alert('登入成功!'); location.href = 'index.php';</script>";
+			echo "<script>alert('登入成功!'); location.href = 'addproduct.php';</script>";
 			exit;
 		} else {
-			echo "<script>alert('使用者or密碼有問題!'); location.href = 'login.php';</script>";
+			echo "<script>alert('使用者or密碼有問題!'); location.href = 'adminlogin.php';</script>";
 		}
 	} else {
-		echo "<script>alert('內容不完整!'); location.href = 'login.php';</script>";
+		echo "<script>alert('內容不完整!'); location.href = 'adminlogin.php';</script>";
 	}
 	mysqli_close();
 }
