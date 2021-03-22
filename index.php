@@ -4,6 +4,29 @@
         <title>購物車</title>
     </head>
   <body>
+  <a href="adminlogin.php">管理員新增商品</a><p>
+  <style type="text/css">
+body{
+ font-family:"微軟正黑體";
+}
+td input{
+ font-family:"微軟正黑體";
+ width:100%;
+}
+table {
+ margin: 0px;
+ padding: 0px;
+ background-color:#999999;
+ font-size:0.85em;
+ font-family:"微軟正黑體";
+}
+td {
+ background-color:#FFF;
+ text-align: center;
+ margin: 0px;
+ padding: 3px;
+}
+</style>
 商品列表：
 <?php
 session_start();
@@ -30,5 +53,10 @@ while ($row = mysqli_fetch_assoc($result)) {
 }
 ?>
 </table>
+<p>
+<form name="add" action="search.php" method="post">
+<p>請輸入商品 : <input type=text name="keyword"></p>
+<input type="submit" name="submit" value="新增至購物車"><p>
+購物車：
 </body>
 </html>

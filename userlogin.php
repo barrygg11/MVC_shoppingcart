@@ -9,8 +9,8 @@ echo "目前時間 $DateAndTime.";
 <html>
 <body>
 <form name="login" action="userlogincontroller.php" method="post">
-<p>使用者 : <input type=text name="name"></p>
-<p>密碼 : <input type=password name="password"></p>
+<p>使用者 : <input type=text placeholder="user" name="name"></p>
+<p>密碼 : <input type=password placeholder="11111" name="password"></p>
 <input type="submit" name="submit" value="登入">&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" name="Reset" value="清除">
 </body>
 </html>
