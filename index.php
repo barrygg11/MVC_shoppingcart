@@ -40,6 +40,7 @@ echo "<th>商品</th>";
 echo "<th>單價</th>";
 echo "<th>數量</th>";
 echo "<th>總計</th>";
+echo "<td>" . "總共有 " . mysqli_num_rows($result) . " 筆商品" . "</td>";
 echo "</tr>";
 echo "</thead>";
 echo "<tbody>";
@@ -50,13 +51,15 @@ while ($row = mysqli_fetch_assoc($result)) {
 	echo "<td>" . $row['count'] . "個" . "</td>";
   echo "<td>" . $row['amount'] . "元" . "</td>";
   echo "</tr>";
-}
+} 
+
 ?>
+
 </table>
 <p>
 <form name="add" action="search.php" method="post">
 <p>請輸入商品 : <input type=text name="keyword"></p>
-<input type="submit" name="submit" value="新增至購物車"><p>
+<input type="submit" name="submit" value="搜尋商品"><p>
 購物車：
 </body>
 </html>
