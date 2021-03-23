@@ -17,12 +17,12 @@
         ?>
                     <div class="col-md-3">
                         <form method="post" action="shoplistcontroller.php?action=add&id=<?php echo $row["id"]; ?>">
-                                <h5>商品： <?php echo $row["product"]; ?></h5>
-                                <h5>$<?php echo $row["price"]; ?>元</h5>
+                                <h5>商品：<?php echo $row["product"]; ?></h5>
+                                <h5>單價：$<?php echo $row["price"]; ?>元</h5>
                                 <input type="text" name="count" class="form-control" placeholder="請輸入數量">個
                                 <input type="hidden" name="product" value="<?php echo $row["product"]; ?>">
                                 <input type="hidden" name="price" value="<?php echo $row["price"]; ?>"><p>
-                                <input type="submit" name="add" style="margin-top: 5px;" class="btn btn-success" value="新增購物車">
+                                <input type="submit" name="add"  value="新增購物車">
                         </form>
                     <?php
                 }
