@@ -36,7 +36,7 @@
             foreach ($_SESSION["cart"] as $keys => $value){
                 if ($value["id"] == $_GET["id"]){
                     unset($_SESSION["cart"][$keys]);
-                    echo '<script>alert("刪除")</script>';
+                    echo '<script>alert("商品已刪除")</script>';
                     echo '<script>window.location="shoplist.php"</script>';
                 }
             }

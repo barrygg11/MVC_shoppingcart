@@ -41,6 +41,7 @@ echo "<th>商品</th>";
 echo "<th>單價</th>";
 echo "<th>數量</th>";
 echo "<th>總計</th>";
+echo "<th>操作</th>";
 echo "<td>" . "總共有 " . mysqli_num_rows($result) . " 筆商品" . "</td>";
 echo "</tr>";
 echo "</thead>";
@@ -51,6 +52,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 	echo "<td>" . $row['price'] . "元" . "</td>";
 	echo "<td>" . $row['count'] . "個" . "</td>";
   echo "<td>" . $row['amount'] . "元" . "</td>";
+  echo "<td>" . "<button>刪除</buttoun>" . "</td>";
   echo "</tr>";
 } 
 ?>

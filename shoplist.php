@@ -1,11 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>購物車</title>
+<meta charset="UTF-8">
+<title>購物車</title>
 </head>
 <body>
 <a href="adminlogin.php">管理員新增商品</a><p>
+<a href="index.php">首頁</a><p>
         <h2>購物車</h2>
         <?php
             require_once('shoplistcontroller.php');
@@ -21,7 +22,7 @@
                         <form method="post" action="shoplistcontroller.php?action=add&id=<?php echo $row["id"]; ?>">
                                 <h5>商品： <?php echo $row["product"]; ?></h5>
                                 <h5>$<?php echo $row["price"]; ?>元</h5>
-                                <input type="text" name="count" class="form-control" placeholder="請輸入數量">
+                                <input type="text" name="count" class="form-control" placeholder="請輸入數量">個
                                 <input type="hidden" name="product" value="<?php echo $row["product"]; ?>">
                                 <input type="hidden" name="price" value="<?php echo $row["price"]; ?>"><p>
                                 <input type="submit" name="add" style="margin-top: 5px;" class="btn btn-success" value="新增購物車">
@@ -47,10 +48,10 @@
                     foreach ($_SESSION["cart"] as $key => $value) {
                         ?>
                         <tr>
-                            <td><?php echo $value["product"]; ?></td>
-                            <td><?php echo $value["price"]; ?></td>
-                            <td><?php echo $value["count"]; ?></td>
-                            <td> $ <?php echo number_format($value["price"] * $value["count"]); ?></td>
+                            <td> <?php echo $value["product"]; ?> </td>
+                            <td> <?php echo $value["price"]; ?> 元</td>
+                            <td> <?php echo $value["count"]; ?> 個</td>
+                            <td> $ <?php echo number_format($value["price"] * $value["count"]); ?> 元</td>
                             <td><a href="shoplist.php?action=delete&id=<?php echo $value["id"]; ?>"><span
                                         class="text-danger">刪除</span></a></td>
                                         </tr>
@@ -64,10 +65,9 @@
                             <td></td>
                         </tr>
                         <?php
-}
-?>
+                        }
+                        ?>
             </table>
-        </div>
-    </div>
-</body>
+    </body>
+    <input type ="button" onclick="location.href='checkout.php'" value="結帳"></input>
 </html>

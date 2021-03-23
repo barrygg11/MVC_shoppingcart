@@ -9,10 +9,8 @@ if (isset($_POST['submit'])) {
     if (!mysqli_query($db, $sql)) {
 		die(mysqli_error());
 	} else { 
-        echo
-        "<script>
-            setTimeout(function(){window.location.href='addproduct.php';},500);
-        </script>";
+        echo "<script>alert('新增商品成功!'); location.href = 'addproduct.php';</script>";
+        exit;
             }
         }
 ?>
