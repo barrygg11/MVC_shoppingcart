@@ -11,6 +11,7 @@ echo "目前時間 $DateAndTime.";
 <p>-----當前是使用者模式-----</p>
 >切換<a href="adminlogin.php">管理員</a><p>
 <a href="register.php">註冊</a></p>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 </head>
 <body>
 <form name="login" action="userlogincontroller.php" method="post">

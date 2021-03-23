@@ -34,26 +34,24 @@ session_start();
 include "model.php";
 $sql = "select * from list";
 $result = mysqli_query($db, $sql);
-echo '<table class="table table-bordered table-striped">';
-echo "<thead>";
-echo "<tr>";
-echo "<th>商品</th>";
-echo "<th>單價</th>";
-echo "<th>數量</th>";
-echo "<th>總計</th>";
-echo "<th>操作</th>";
-echo "<td>" . "總共有 " . mysqli_num_rows($result) . " 筆商品" . "</td>";
-echo "</tr>";
-echo "</thead>";
-echo "<tbody>";
+    echo '<table class="table table-bordered table-striped">';
+    echo "<thead>";
+    echo "<tr>";
+    echo "<th>商品</th>";
+    echo "<th>單價</th>";
+    echo "<th>數量</th>";
+    echo "<th>總計</th>";
+    echo "<td>" . "總共有 " . mysqli_num_rows($result) . " 筆商品" . "</td>";
+    echo "</tr>";
+    echo "</thead>";
+    echo "<tbody>";
 while ($row = mysqli_fetch_assoc($result)) {
-  echo "<tr>";
+    echo "<tr>";
 	echo "<td>" . $row['product'] . "</td>";
 	echo "<td>" . $row['price'] . "元" . "</td>";
 	echo "<td>" . $row['count'] . "個" . "</td>";
-  echo "<td>" . $row['amount'] . "元" . "</td>";
-  echo "<td>" . "<button>刪除</buttoun>" . "</td>";
-  echo "</tr>";
+    echo "<td>" . $row['amount'] . "元" . "</td>";
+    echo "</tr>";
 } 
 ?>
 
