@@ -37,7 +37,6 @@ href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <th>單價</th>
 <th>數量</th>
 <th>總計</th>
-<th>操作</th>
 </tr>
 <?php
 while($row = $result->fetch_assoc()){
@@ -47,10 +46,7 @@ while($row = $result->fetch_assoc()){
     <td><?php echo $row['price'] . "元"; ?></td>
     <td><?php echo $row['count'] . "個"; ?></td>
     <td><?php echo $row['amount'] . "元"; ?></td>
-    <td>
-    <input type="submit" value="新增" name="btn" class="btn btn-sm btn-primary">
-    <input type="submit" value="刪除" name="btn" class="btn btn-sm btn-primary">
-    </td>
+
     </tr>
     <?php
 }

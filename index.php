@@ -57,9 +57,8 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 </table>
 <p>
-<form name="add" action="search.php" method="post">
-<p>請輸入商品 : <input type=text name="keyword"></p>
+<form name="search" action="search.php" method="post">
 <input type="submit" name="submit" value="搜尋商品"><p>
-購物車：
+<a href="shoplist.php">購物車</a><p>
 </body>
 </html>
